@@ -3,7 +3,14 @@ import express from "express"
 const router = express.Router()
 
 //Criar um item
-router.post(
+router.post("/items", async (req,res) => {
+    try {
+        const data = 
+    } catch (error) {
+        
+    }
+
+}
 
 )
 
