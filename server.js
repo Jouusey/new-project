@@ -15,6 +15,12 @@ app.use(express.json())
 
 // Chamar rotas
 
+//handler de erros
+
+app.use((_,res) => {
+    res.status(404).json({error: "rota não encontrada"})
+})
+
 // iniciar a aplicação
 
 app.listen(PORT, () => {
