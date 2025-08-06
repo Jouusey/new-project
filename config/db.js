@@ -15,3 +15,11 @@ const pool = new Pool({
     port:process.env.PGPORT
     
 })
+
+pool.on("error", (err) => {
+    console.error("Erro ao conectar ao banco de dados")
+    process.exit(-1)
+})
+
+
+export default pool;
